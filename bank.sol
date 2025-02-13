@@ -44,7 +44,7 @@ contract Bank {
 
     function withdraw() public returns (uint256) {
         require(msg.sender == admin, "admin wrong");
-        admin.transfer(address(this).balance);
+        payable(admin).transfer(address(this).balance);
         return address(this).balance;
     }
 
