@@ -17,8 +17,12 @@ contract ModifierExample {
     }
 
     // isOwner
+    modifier isOwner() {
+        require(msg.sender == owner, "Only owner");
+        _;
+    }
 
-    function withdraw() public {
+    function withdraw() public isOwner {
         // 函数体可以留空 
     }
 }

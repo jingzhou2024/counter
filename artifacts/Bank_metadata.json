@@ -78,6 +78,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getRankings",
 				"outputs": [
@@ -165,18 +183,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
 		"bank.sol": {
-			"keccak256": "0x26d516d8c68530490717fa667334ee2b4ec32f5cff5a34e162f013577f7254b3",
+			"keccak256": "0x5f2741d03f1ddea14b90fbae3959c5dd9666ceedac08111f6e67103dcb004b03",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5ff1616bbca3b07dbe2949134ed0ff9d860fb3db13b4e5cfdf1c66db0d5fc8d3",
-				"dweb:/ipfs/QmUFDs6xdn1KCvdkKrGYWkE6cCjGPdYjEG6rVWUZX3hk1T"
+				"bzz-raw://f8ef080988aff4983278ba3ce9a32ce7249b0d41c3efdc580f3270af7d7e849f",
+				"dweb:/ipfs/QmaBT9xJt8XnjgHTgd5GXt5FkEx2Mi87fYWQw9swV7597R"
 			]
 		}
 	},
