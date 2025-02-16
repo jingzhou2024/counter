@@ -4,7 +4,96 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "deposits",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "token",
+				"outputs": [
+					{
+						"internalType": "contract BaseERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -32,12 +121,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"tokenbank.sol": {
-			"keccak256": "0xaad8188c89b63d500fd63cac83fc61ab6bd0dee1b5905ba3c5f0cbe50ec1dbaf",
+		"token.sol": {
+			"keccak256": "0x3271f2755111ad9f5c128ffac4787f1cfffa495a7ea9ea8db3427bd7b2f8fe19",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8e7773cbcb4e6c3218660bd1c7b3dfdece5d850dc25614715c4cdedd9419b7c8",
-				"dweb:/ipfs/QmcN6TYns3ER7AkkxUZYkmABTLY65WsUorq7uSVz4EE9tQ"
+				"bzz-raw://1a5ba66ef72dd5b8d39ecbb506d861401b4a94daa29c54131aa088c5f7db5519",
+				"dweb:/ipfs/QmXmm16K3RVcbCNfpXhRLKoN13PEvxyu29gMFX9buysPYZ"
+			]
+		},
+		"tokenbank.sol": {
+			"keccak256": "0x480e1c9ea16c85e10d94b37a2cea489e49bcbfacf111de14b362212ededf355d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://39b3bfef1a591df48e5bdbbfce1a5f7f341380dacb2d44fe40f80a734dc3c1e0",
+				"dweb:/ipfs/QmY1yDoDjHSAUYGcKfevNfVUoZuqTKJxjUMDKt89DntcY7"
 			]
 		}
 	},

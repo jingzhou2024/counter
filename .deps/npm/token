@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using Terser v5.15.1.
+ * Original file: /npm/token@0.1.0/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+var crypto=require("crypto"),d=exports.defaults={cache:!0},items={};function cache(e){return items[e]&&d.cache||(Object.keys(items).length>500&&(items={}),items[e]=crypto.createHmac("sha512",d.secret).update(e).digest("base64")),items[e]}exports.INVALID=0,exports.VALID=1,exports.EXPIRING=2,exports.verify=function(e,t){if("string"!=typeof e||"string"!=typeof t)return!1;var r=Math.floor((new Date).getTime()/1e3/d.timeStep);return t===cache(e+r)||t===cache(e+(r+1))?exports.VALID:t===cache(e+(r-1))?exports.EXPIRING:exports.INVALID},exports.generate=function(e,t){if("string"!=typeof e)return!1;var r=t&&t.now||(new Date).getTime(),i=t&&t.timeStep||d.timeStep,s=t&&t.secret||d.secret,a=Math.floor(r/1e3/i);return crypto.createHmac("sha512",s).update(e+a).digest("base64")},exports.invalidate=function(e,t){var r=exports.verify(e,t),i=Math.floor((new Date).getTime()/1e3/d.timeStep);if(!r)throw"invalid hash";return items[t+i]=null,!0};
+//# sourceMappingURL=/sm/500ac19a1111fda0ca45c9c603c9d525d2389a9dc230c6a3312aa13a728c913e.map

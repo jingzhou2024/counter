@@ -246,7 +246,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"token.sol": "BaseERC20"
+			"tokenbank.sol": "BaseERC20"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -254,18 +254,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"token.sol": {
-			"keccak256": "0x7151d8a4453a9a88b80d57848734a74cf5eb1cc4548fe01141beb281654b5bea",
+		"tokenbank.sol": {
+			"keccak256": "0xd0a5e4234c8da390801fc00015fbf63ac5c1925ad6c509b6ad679acc177d600d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://850b01a5d3e645160fc3f961d7de1c48d3ff7bf7107dc542e9f83c4bfc46948e",
-				"dweb:/ipfs/QmTuwncgfPec8BaeBBLtu2QtnC6EV987SLNNErQ98Ja8yu"
+				"bzz-raw://c5f12fc1d62c129dc83473e51b36950c22b5fcd7730e228d98088a9439f040f8",
+				"dweb:/ipfs/QmQTSowdMYfewYuS8CyhsDqBcfPbNBje2TzDtiSySjs5SR"
 			]
 		}
 	},
