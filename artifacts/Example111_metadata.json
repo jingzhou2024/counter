@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "constructor"
 			},
 			{
@@ -27,6 +27,19 @@
 				"type": "error"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"stateMutability": "payable",
 				"type": "receive"
 			}
@@ -44,7 +57,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"testError.sol": "Example"
+			"testError.sol": "Example111"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -59,11 +72,11 @@
 	},
 	"sources": {
 		"testError.sol": {
-			"keccak256": "0xb7dc3bc144e095ff3103dd7cead475b40d46eafaf4b414799f16806a943aa2c9",
+			"keccak256": "0x2528cc908cd0635c2d26f3cb73aa3d5e9d7a1d6dc3698adbf2ef1891e900f896",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://75151974cfa61be196c9cdb4670256620e00fe3f6b6cde7e991affe51c3857d2",
-				"dweb:/ipfs/QmSA3hyJLbdcv2cqWUdegwMUjohXs4PWxJ39cS1n1jnhkV"
+				"bzz-raw://7606c3bca34120b3a3abca017ba9ee2677c6a86a0bf900f29044a56e4721713f",
+				"dweb:/ipfs/QmYW8kMBsHDpuDwrsriqpQGyVMMcAKuxLYewWWeGrK1CE1"
 			]
 		}
 	},

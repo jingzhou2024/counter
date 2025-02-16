@@ -6,29 +6,30 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "available",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "required",
+						"name": "_newValue",
 						"type": "uint256"
 					}
 				],
-				"name": "InsufficientBalance",
-				"type": "error"
+				"name": "setValue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "receive"
+				"inputs": [],
+				"name": "value",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -44,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"testError.sol": "Example"
+			"call_6.sol": "Callee"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -58,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"testError.sol": {
-			"keccak256": "0xb7dc3bc144e095ff3103dd7cead475b40d46eafaf4b414799f16806a943aa2c9",
+		"call_6.sol": {
+			"keccak256": "0x79f8f6087700cdfe850235cd9812ec28b4955bd20de4b7edf8360d6809a44d68",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://75151974cfa61be196c9cdb4670256620e00fe3f6b6cde7e991affe51c3857d2",
-				"dweb:/ipfs/QmSA3hyJLbdcv2cqWUdegwMUjohXs4PWxJ39cS1n1jnhkV"
+				"bzz-raw://5f3e6b400b8788d78963e8b9c47a12644d1d137ff54abe9f6d833a8b3df42405",
+				"dweb:/ipfs/QmWiwb9zXg9ANTcAQJRGjSNxFSamtoLLmQPkMhoYtYxNo5"
 			]
 		}
 	},
