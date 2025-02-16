@@ -197,11 +197,11 @@
 	},
 	"sources": {
 		"bank.sol": {
-			"keccak256": "0x5f2741d03f1ddea14b90fbae3959c5dd9666ceedac08111f6e67103dcb004b03",
+			"keccak256": "0x645efe3d8f3e023b312bc5a4f69236bc780cf54cccc5c5365e3f6d57fae1affe",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f8ef080988aff4983278ba3ce9a32ce7249b0d41c3efdc580f3270af7d7e849f",
-				"dweb:/ipfs/QmaBT9xJt8XnjgHTgd5GXt5FkEx2Mi87fYWQw9swV7597R"
+				"bzz-raw://09c2f5cc7c633af3b946df73f1196c32e106dca3a8e1b0f60003de26ed5b86be",
+				"dweb:/ipfs/QmUq6ciS4rtwi3QyqEiLD5gSqwptzYR2hG81KbY5iXH7PB"
 			]
 		}
 	},

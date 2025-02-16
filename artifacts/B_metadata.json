@@ -7,16 +7,20 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "withdraw",
+				"name": "sender",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -32,7 +36,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"bank.sol": "IBank"
+			"testtransfer.sol": "B"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -40,18 +44,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"bank.sol": {
-			"keccak256": "0x645efe3d8f3e023b312bc5a4f69236bc780cf54cccc5c5365e3f6d57fae1affe",
+		"testtransfer.sol": {
+			"keccak256": "0xbb9f4d1a24c0519c8db3722575250788850c02fb6bd0105c9028e7efb4fd9357",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://09c2f5cc7c633af3b946df73f1196c32e106dca3a8e1b0f60003de26ed5b86be",
-				"dweb:/ipfs/QmUq6ciS4rtwi3QyqEiLD5gSqwptzYR2hG81KbY5iXH7PB"
+				"bzz-raw://07ee555341f978ae5cc44d6ff9dc9b00e2ae5a779bb7f9571c9cd9e9e7ceacf2",
+				"dweb:/ipfs/QmZDFteujqMG2wSXHwK7Ge1o9mXJ62SWqsDHtQGfKKJTdx"
 			]
 		}
 	},

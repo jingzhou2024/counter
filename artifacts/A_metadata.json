@@ -7,7 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "withdraw",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "a",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -15,7 +20,20 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "b",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -32,7 +50,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"bank.sol": "IBank"
+			"testconst.sol": "A"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -40,18 +58,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"bank.sol": {
-			"keccak256": "0x645efe3d8f3e023b312bc5a4f69236bc780cf54cccc5c5365e3f6d57fae1affe",
+		"testconst.sol": {
+			"keccak256": "0x29c3ae4cedb13b3a8e4dfee283d9362ed19055646afad62eaf8d2ebba4a17370",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://09c2f5cc7c633af3b946df73f1196c32e106dca3a8e1b0f60003de26ed5b86be",
-				"dweb:/ipfs/QmUq6ciS4rtwi3QyqEiLD5gSqwptzYR2hG81KbY5iXH7PB"
+				"bzz-raw://e749fca4b43606cf20b56c29486917fcd20cb21c9f834e2d5e5c65dcda63eb58",
+				"dweb:/ipfs/Qmb4mzAN7jK29EcydKz8MJkGCqJGi9765k7qD5CctX9kWk"
 			]
 		}
 	},

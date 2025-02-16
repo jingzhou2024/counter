@@ -12,33 +12,37 @@
 			},
 			{
 				"inputs": [],
-				"name": "_owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "contract IBank",
-						"name": "bank",
-						"type": "address"
-					}
-				],
-				"name": "adminWithdraw",
+				"name": "canceled",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "receive"
+				"inputs": [],
+				"name": "deliver",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ship",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "status",
+				"outputs": [
+					{
+						"internalType": "enum E.Status",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -54,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"bank.sol": "Admin"
+			"testEnum.sol": "E"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -62,18 +66,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"bank.sol": {
-			"keccak256": "0x645efe3d8f3e023b312bc5a4f69236bc780cf54cccc5c5365e3f6d57fae1affe",
+		"testEnum.sol": {
+			"keccak256": "0x6df282980caf984ee5a3440e8ec59b840065c2c8965148a8fc689fa3df77f10a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://09c2f5cc7c633af3b946df73f1196c32e106dca3a8e1b0f60003de26ed5b86be",
-				"dweb:/ipfs/QmUq6ciS4rtwi3QyqEiLD5gSqwptzYR2hG81KbY5iXH7PB"
+				"bzz-raw://d9a036ac2f8b9c8ef8cb949f7ff491d060ec1c58b0179db83eed18bbc6f041d6",
+				"dweb:/ipfs/QmfJedcUi5JsLcyZ1dYrDy7y4CQ4oDexw17WxN2ymZ6xWc"
 			]
 		}
 	},
