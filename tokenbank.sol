@@ -51,4 +51,16 @@ contract TokenBankVTwo is TokenBank {
         ); // 从用户账户转移token到TokenBank合约
         deposits[msg.sender] += _amount; // 更新存款记录
     }
+    event TokensReceived(address indexed operator, address indexed from, uint256 amount, bytes data);
+
+    function tokensReceived(
+        address operator,
+        address from,
+        uint256 amount,
+        bytes memory data
+    ) external {
+        require(msg.sender == address(token), "Invalid token");
+        deposits[from] += amount; // 记录存款
+        emit TokensReceived(operator, from, amount, data); // 触发事件
+    }
 }

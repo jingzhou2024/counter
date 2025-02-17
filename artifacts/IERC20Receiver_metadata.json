@@ -42,7 +42,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"tokenbanktest.sol": "IERC20Receiver"
+			"./token.sol": "IERC20Receiver"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -56,12 +56,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"tokenbanktest.sol": {
-			"keccak256": "0x19bbc6fecf0ec672b6e3fcbea069e47b4a9470fc2486048c7cc01bb117442624",
+		"./token.sol": {
+			"keccak256": "0x2584e2df7c54f196b2ca0ae773f9bac12127fede1ab299a278c26153df390679",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6f95b14aacb4aab5465bdb10a82e2aa1cab024b22c4fbc706d5b43dd36a7f26e",
-				"dweb:/ipfs/QmYZ5kV1LVF3FBHwpukd93G2VJvCub3UWLYQLrjKpdrFPs"
+				"bzz-raw://569f9fd866d1e873c7ead6c64f750462dc709efd99270ee119d5386e96764cd5",
+				"dweb:/ipfs/QmWsfL6Fuvqmp8SKNwUjPYXyYWp1BXMGjkgQ1gKb6QBzVM"
 			]
 		}
 	},

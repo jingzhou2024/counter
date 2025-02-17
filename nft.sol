@@ -87,7 +87,9 @@ contract BaseERC721 {
         string memory symbol_,
         string memory baseURI_
     ) {
-        /**code*/
+        _name = name_;
+        _symbol = symbol_;
+        _baseURI = baseURI_;
 
     }
 
@@ -106,6 +108,7 @@ contract BaseERC721 {
      */
     function name() public view returns (string memory) {
         /**code*/
+        return _name;
 
     }
 
@@ -114,6 +117,7 @@ contract BaseERC721 {
      */
     function symbol() public view returns (string memory) {
         /**code*/
+        return _symbol;
         
     }
 
@@ -122,12 +126,13 @@ contract BaseERC721 {
      */
     function tokenURI(uint256 tokenId) public view returns (string memory) {
         require(
-            /**code*/,
+            _exists(tokenId),
             "ERC721Metadata: URI query for nonexistent token"
         );
 
         // should return baseURI
         /**code*/
+        return string(abi.encodePacked(_baseURI, tokenId.toString()));
     }
 
     /**
@@ -142,10 +147,12 @@ contract BaseERC721 {
      * Emits a {Transfer} event.
      */
     function mint(address to, uint256 tokenId) public {
-        require(/**code*/ , "ERC721: mint to the zero address");
-        require(/**code*/, "ERC721: token already minted");
+        require(to != address(0), "ERC721: mint to the zero address");
+        require(!_exists(tokenId), "ERC721: token already minted");
 
         /**code*/
+        _balances[to] += 1;
+        _owners[tokenId] = to;
 
         emit Transfer(address(0), to, tokenId);
     }
@@ -155,13 +162,17 @@ contract BaseERC721 {
      */
     function balanceOf(address owner) public view returns (uint256) {
         /**code*/
+        require(owner != address(0), "ERC721: balanceOf");
+        return _balances[owner];
     }
 
     /**
      * @dev See {IERC721-ownerOf}.
      */
     function ownerOf(uint256 tokenId) public view returns (address) {
-        /**code*/
+        address owner = _owners[tokenId];
+        require(owner != address(0), "ERC721: ownerOf");
+        return owner;
     }
 
     /**
@@ -293,6 +304,8 @@ contract BaseERC721 {
      */
     function _exists(uint256 tokenId) internal view returns (bool) {
         /**code*/
+        return _owners[tokenId] != address(0);
+
     }
 
     /**
@@ -312,6 +325,8 @@ contract BaseERC721 {
         );
 
         /**code*/
+        address owner = ownerOf(tokenId);
+        return (spender == owner || getApproved(tokenId) == spender || isApprovedForAll(owner, spender));
     }
 
     /**
