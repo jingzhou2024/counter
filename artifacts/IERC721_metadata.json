@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"nftmarket.sol": "IERC721"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"nftmarket.sol": {
+			"keccak256": "0xe1ddd6902850aec85b21b9ea0f12fd304c0a1a253c440e2b3f41b2f59208d202",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://422aeb759ebabab2e4ed80d81535d962d6b371b8aee2ed753e3e090e108c4886",
+				"dweb:/ipfs/QmeWMy3ugUcwgG8RvsUhcw2zcYmRsYUnr9Vfeic3aLij5B"
+			]
+		},
+		"token.sol": {
+			"keccak256": "0x2584e2df7c54f196b2ca0ae773f9bac12127fede1ab299a278c26153df390679",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://569f9fd866d1e873c7ead6c64f750462dc709efd99270ee119d5386e96764cd5",
+				"dweb:/ipfs/QmWsfL6Fuvqmp8SKNwUjPYXyYWp1BXMGjkgQ1gKb6QBzVM"
+			]
+		}
+	},
+	"version": 1
+}

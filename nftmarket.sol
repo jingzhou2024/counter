@@ -1,26 +1,76 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-/*
-题目#2
-编写一个简单的 NFTMarket 合约，使用自己发行的ERC20 扩展 Token 来买卖 NFT， NFTMarket 的函数有：
 
-list() : 实现上架功能，NFT 持有者可以设定一个价格（需要多少个 Token 购买该 NFT）并上架 NFT 到 NFTMarket，上架之后，其他人才可以购买。
+import {BaseERC20, IERC20Receiver} from "./token.sol";
 
-buyNFT() : 普通的购买 NFT 功能，用户转入所定价的 token 数量，获得对应的 NFT。
+interface IERC721 {
+    function safeTransferFrom(address from, address to, uint256 tokenId) external;
+    function ownerOf(uint256 tokenId) external view returns (address);
+}
 
-实现ERC20 扩展 Token 所要求的接收者方法 tokensReceived  ，在 tokensReceived 中实现NFT 购买功能。
-
-贴出你代码库链接。
-*/
-
-contract NFTMarket {
-    function list() public  {
-
+contract NFTMarket is IERC20Receiver {
+    struct Listing {
+        address seller;
+        uint256 price;
+        bool isListed;
     }
-    function buyNFT(uint token)public {
 
+    mapping(uint256 => Listing) public listings;
+    IERC721 public nftContract;
+    BaseERC20 public tokenContract;
+
+    event Listed(uint256 indexed tokenId, address indexed seller, uint256 price);
+    event Bought(uint256 indexed tokenId, address indexed buyer, address indexed seller, uint256 price);
+
+    constructor(address _nftContract, address _tokenContract) {
+        nftContract = IERC721(_nftContract);
+        tokenContract = BaseERC20(_tokenContract);
     }
-    function tokensReceived() public {
-        
+
+    function list(uint256 tokenId, uint256 price) external {
+        require(nftContract.ownerOf(tokenId) == msg.sender, "Not the owner");
+        require(price > 0, "Price must be greater than 0");
+
+        listings[tokenId] = Listing({
+            seller: msg.sender,
+            price: price,
+            isListed: true
+        });
+
+        emit Listed(tokenId, msg.sender, price);
+    }
+
+    function buyNFT(uint256 tokenId) external {
+        Listing memory listing = listings[tokenId];
+        require(listing.isListed, "NFT not listed");
+        require(tokenContract.balanceOf(msg.sender) >= listing.price, "Insufficient balance");
+
+        tokenContract.transferFrom(msg.sender, listing.seller, listing.price);
+        nftContract.safeTransferFrom(listing.seller, msg.sender, tokenId);
+
+        delete listings[tokenId];
+
+        emit Bought(tokenId, msg.sender, listing.seller, listing.price);
+    }
+
+    function tokensReceived(
+        address _from,
+        uint256 _value,
+        bytes memory _data
+    ) external override {
+        require(msg.sender == address(tokenContract), "Only accept BaseERC20 tokens");
+        require(_data.length == 32, "Invalid data length");
+
+        uint256 tokenId = abi.decode(_data, (uint256));
+        Listing memory listing = listings[tokenId];
+        require(listing.isListed, "NFT not listed");
+        require(_value >= listing.price, "Insufficient payment");
+
+        tokenContract.transferFrom(_from, listing.seller, listing.price);
+        nftContract.safeTransferFrom(listing.seller, _from, tokenId);
+
+        delete listings[tokenId];
+
+        emit Bought(tokenId, _from, listing.seller, listing.price);
     }
 }

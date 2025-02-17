@@ -49,10 +49,30 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"tokensReceived(address,uint256)": "24a756d1"
+			"ownerOf(uint256)": "6352211e",
+			"safeTransferFrom(address,address,uint256)": "42842e0e"
 		}
 	},
 	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				}
+			],
+			"name": "ownerOf",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
 		{
 			"inputs": [
 				{
@@ -61,12 +81,17 @@
 					"type": "address"
 				},
 				{
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				},
+				{
 					"internalType": "uint256",
-					"name": "amount",
+					"name": "tokenId",
 					"type": "uint256"
 				}
 			],
-			"name": "tokensReceived",
+			"name": "safeTransferFrom",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
