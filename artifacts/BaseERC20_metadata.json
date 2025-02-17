@@ -231,6 +231,35 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "transferWithCallback",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -246,7 +275,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"tokenbank.sol": "BaseERC20"
+			"tokenbanktest.sol": "BaseERC20"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -260,12 +289,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"tokenbank.sol": {
-			"keccak256": "0xd0a5e4234c8da390801fc00015fbf63ac5c1925ad6c509b6ad679acc177d600d",
+		"tokenbanktest.sol": {
+			"keccak256": "0x19bbc6fecf0ec672b6e3fcbea069e47b4a9470fc2486048c7cc01bb117442624",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c5f12fc1d62c129dc83473e51b36950c22b5fcd7730e228d98088a9439f040f8",
-				"dweb:/ipfs/QmQTSowdMYfewYuS8CyhsDqBcfPbNBje2TzDtiSySjs5SR"
+				"bzz-raw://6f95b14aacb4aab5465bdb10a82e2aa1cab024b22c4fbc706d5b43dd36a7f26e",
+				"dweb:/ipfs/QmYZ5kV1LVF3FBHwpukd93G2VJvCub3UWLYQLrjKpdrFPs"
 			]
 		}
 	},

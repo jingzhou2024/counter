@@ -107,7 +107,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"tokenbanktest.sol": "TokenBank"
+			"tokenbanktest.sol": "TokenBankVTwo"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

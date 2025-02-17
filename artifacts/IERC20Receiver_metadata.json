@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "tokensReceived",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tokenbanktest.sol": "IERC20Receiver"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"tokenbanktest.sol": {
+			"keccak256": "0x19bbc6fecf0ec672b6e3fcbea069e47b4a9470fc2486048c7cc01bb117442624",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6f95b14aacb4aab5465bdb10a82e2aa1cab024b22c4fbc706d5b43dd36a7f26e",
+				"dweb:/ipfs/QmYZ5kV1LVF3FBHwpukd93G2VJvCub3UWLYQLrjKpdrFPs"
+			]
+		}
+	},
+	"version": 1
+}

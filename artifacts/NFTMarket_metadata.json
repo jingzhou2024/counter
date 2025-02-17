@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "token",
+						"type": "uint256"
+					}
+				],
+				"name": "buyNFT",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "list",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"nftmarket.sol": "NFTMarket"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"nftmarket.sol": {
+			"keccak256": "0x85e506d2af20de24db4c87c945878359cfc1e114cbb3bb6035e1b4f6a51aead1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://782c482107e7c6781bef248ac295f4c1c5df655a26dc2390104f7a40940cd6f1",
+				"dweb:/ipfs/QmPpnTv6EV3btAMy2hRafi4MRVLYNCrYWJaPDD2Mr2VF29"
+			]
+		}
+	},
+	"version": 1
+}

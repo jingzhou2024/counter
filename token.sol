@@ -17,6 +17,14 @@ pragma solidity ^0.8.0;
 在编写合约时，需要遵循 ERC20 标准，此外也需要考虑到安全性，确保转账和授权功能在任何时候都能正常运行无误。
 代码模板中已包含基础框架，只需要在标记为“Write your code here”的地方编写你的代码。不要去修改已有内容！
 */
+// 定义接收合约需要实现的接口
+interface IERC20Receiver {
+    function tokensReceived(
+        address _from,
+        uint256 _value,
+        bytes memory _data
+    ) external;
+}
 
 contract BaseERC20 {
     string public name;
@@ -83,8 +91,8 @@ contract BaseERC20 {
         );
         if (msg.sender != _to) {
             allowances[_from][msg.sender] -= _value;
-            balances[_from] -= _value; 
-            balances[_to] += _value; 
+            balances[_from] -= _value;
+            balances[_to] += _value;
             emit Transfer(_from, _to, _value);
         }
         success = true;
@@ -106,5 +114,38 @@ contract BaseERC20 {
     {
         require(_owner != _spender, "DONOT LOOK AT YOUSELF");
         return allowances[_owner][_spender];
+    }
+
+    function transferWithCallback(
+        address _to,
+        uint256 _value,
+        bytes memory _data
+    ) public returns (bool success) {
+        require(
+            balances[msg.sender] >= _value,
+            "ERC20: transfer amount exceeds balance"
+        );
+        require(msg.sender != _to, "DONT TRANSFER YOUSELF");
+
+        balances[msg.sender] -= _value;
+        balances[_to] += _value;
+
+        emit Transfer(msg.sender, _to, _value);
+
+        // 检查接收地址是否为合约地址
+        if (isContract(_to)) {
+            IERC20Receiver(_to).tokensReceived(msg.sender, _value, _data);
+        }
+
+        return true;
+    }
+
+    // 辅助函数：检查地址是否为合约地址
+    function isContract(address addr) internal view returns (bool) {
+        uint256 codeSize;
+        assembly {
+            codeSize := extcodesize(addr)
+        }
+        return codeSize > 0;
     }
 }
