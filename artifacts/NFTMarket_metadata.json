@@ -6,162 +6,9 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_nftContract",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "_tokenContract",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "buyer",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "seller",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					}
-				],
-				"name": "Bought",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "seller",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					}
-				],
-				"name": "Listed",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "buyNFT",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					}
-				],
-				"name": "list",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "listings",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "seller",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "isListed",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "nftContract",
-				"outputs": [
-					{
-						"internalType": "contract IERC721",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tokenContract",
-				"outputs": [
-					{
-						"internalType": "contract BaseERC20",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			},
 			{
 				"inputs": [
@@ -200,7 +47,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"nftmarket.sol": "NFTMarket"
+			"nftnetmarket.sol": "NFTMarket"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -214,12 +61,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"nftmarket.sol": {
-			"keccak256": "0xe1ddd6902850aec85b21b9ea0f12fd304c0a1a253c440e2b3f41b2f59208d202",
+		"nftnetmarket.sol": {
+			"keccak256": "0x1c0e9d243df5ec602447b5b85d1cc9ca4bddd2a1ba38b4ab75784ccbba20faf5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://422aeb759ebabab2e4ed80d81535d962d6b371b8aee2ed753e3e090e108c4886",
-				"dweb:/ipfs/QmeWMy3ugUcwgG8RvsUhcw2zcYmRsYUnr9Vfeic3aLij5B"
+				"bzz-raw://bfa0efeb5968f4f934ac9f4572880a19135392d5f61b8953dcc509cc77487f4d",
+				"dweb:/ipfs/QmY9u4Mzgcuk2ctsTSkayUoA8ep34N4r8sCDA5SutB3u1W"
 			]
 		},
 		"token.sol": {
